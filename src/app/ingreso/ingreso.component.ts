@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Ingreso } from './ingreso.model';
+import { IngresoService } from './ingreso.service';
 
 @Component({
   selector: 'app-ingreso',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IngresoComponent implements OnInit {
 
-  constructor() { }
+  ingresos: Ingreso[] = []
+
+  constructor(private ingresoService: IngresoService) { }
 
   ngOnInit(): void {
+    this.ingresos = this.ingresoService.ingreso
+  }
+
+  eliminarIngreso(ingreso: Ingreso): void{
+    this.ingresoService.eliminarIngreso(ingreso)
   }
 
 }

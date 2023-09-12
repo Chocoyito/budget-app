@@ -5,4 +5,9 @@ export class IngresoService{
         new Ingreso('Salario', 4000),
         new Ingreso('Venta de coche', 500)
     ]
+
+    eliminarIngreso(ingreso: Ingreso): void{
+        let indice = this.ingreso.indexOf(ingreso)
+        this.ingreso.splice(indice)
+    }
 }

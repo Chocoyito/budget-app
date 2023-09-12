@@ -41,6 +41,6 @@ export class AppComponent {
   }
 
   getPresupuestoTotal(): number{
-    return this.getIngresoTotal() + this.getEgresoTotal();
+    return this.getIngresoTotal() - this.getEgresoTotal();
   }
 }
