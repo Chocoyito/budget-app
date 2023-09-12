@@ -9,9 +9,9 @@ import { IngresoService } from './ingreso.service';
 })
 export class IngresoComponent implements OnInit {
 
-  ingresos: Ingreso[] = []
-
   constructor(private ingresoService: IngresoService) { }
+  
+  ingresos: Ingreso[] = []
 
   ngOnInit(): void {
     this.ingresos = this.ingresoService.ingreso

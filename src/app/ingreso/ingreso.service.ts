@@ -8,6 +8,6 @@ export class IngresoService{
 
     eliminarIngreso(ingreso: Ingreso): void{
         let indice = this.ingreso.indexOf(ingreso)
-        this.ingreso.splice(indice)
+        this.ingreso.splice(indice, 1)
     }
 }
